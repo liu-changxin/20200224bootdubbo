@@ -3,13 +3,10 @@ package com.lcx.controller;
 
 import com.lcx.pojo.MemberBaseinfo;
 import com.lcx.service.MemberBaseinfoService;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-
-import java.lang.reflect.Member;
 
 /**
  * <p>
@@ -28,7 +25,10 @@ public class MemberBaseinfoController {
     @ResponseBody
     @RequestMapping(value = "{id}",method = RequestMethod.GET) //memberBaseinf/1
     public MemberBaseinfo selectByParimaryKey(@PathVariable("id") final String id){
-        return memberBaseinfoService.selectByPrimaryKey(id);
+        System.out.println("获取的id值是："+id);
+        System.out.println("自动注入的值是："+memberBaseinfoService);
+        MemberBaseinfo memberBaseinfo=memberBaseinfoService.selectByPrimaryKey(id);
+        return memberBaseinfo;
     }
 }
 

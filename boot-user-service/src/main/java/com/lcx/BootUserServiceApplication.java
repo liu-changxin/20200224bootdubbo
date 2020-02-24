@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.lcx.mapper"})
+@MapperScan("com.lcx.mapper")
 public class BootUserServiceApplication {
 
 	public static void main(String[] args) {
