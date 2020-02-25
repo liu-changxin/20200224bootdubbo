@@ -6,13 +6,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.lcx.mapper")
-//@EnableDubbo(scanBasePackages = "com.lcx.service.impl.MemberBaseinfoServiceImpl")
+@MapperScan(basePackages = "com.lcx.mapper")
 @EnableDubbo
-public class BootUserServiceApplication {
+public class BootMeetingPubServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootUserServiceApplication.class, args);
+		SpringApplication.run(BootMeetingPubServiceApplication.class, args);
 	}
 
 }
